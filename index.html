@@ -48,7 +48,7 @@ button:disabled{opacity:.7;cursor:not-allowed}
 .notice{position:fixed;right:18px;bottom:18px;width:min(340px,calc(100% - 36px));background:#fff;border-left:5px solid #71963c;border-radius:14px;padding:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.16);z-index:50;display:none}
 .notice strong{display:block;color:#244d27}
 .notice small{color:#777}
-.notice.demo::after{content:"Sample order notification";display:block;font-size:10px;color:#a66b4f;margin-top:5px}
+.notice.demo::after{content:"";display:block;font-size:10px;color:#a66b4f;margin-top:5px}
 footer{text-align:center;padding:35px 15px;color:#6d716b;font-size:13px}
 .sticky{display:none}
 .thanks{display:none;min-height:70vh;align-items:center;justify-content:center;text-align:center;padding:30px}
@@ -78,7 +78,7 @@ body{padding-bottom:75px}
 </script>
 
 <style id="order-stock-position-fix">
-/* Sample order notification — upper corner */
+/*  — upper corner */
 #orderNotification, .order-notification, .toast, .sample-order-notification {
   position: fixed !important;
   top: 18px !important;
@@ -743,7 +743,7 @@ body.thank-you-mode #thanks {
 
 <footer>© 2026 Hand & Feet Care • Cash on Delivery</footer>
 <div class="sticky"><a href="#order">🛒 ORDER NOW</a></div>
-<div class="notice demo" id="demoNotice"><strong>🛍️ Order Activity</strong><span id="demoText">Customers are ordering this product.</span><small>Sample order notification</small></div>
+<div class="notice demo" id="demoNotice"><strong>🛍️ Order Activity</strong><span id="demoText">Customers are ordering this product.</span><small></small></div>
 </div>
 
 <div class="thanks" id="thanks">
