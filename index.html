@@ -601,6 +601,28 @@ h1,h2,h3{letter-spacing:-.3px}
   text-shadow:0 1px 2px rgba(245,180,0,.18);
 }
 </style>
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;
+  var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+  ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+    ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
+    n=document.createElement("script");
+    n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;
+    e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)
+  };
+  ttq.load('DAE0B03C77UDHLL3I26G');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+
 </head>
 <body>
 <style>
@@ -790,7 +812,7 @@ function showThanks() {
   window.location.href = '/?thank_you=1';
 }
 
-// This is intentionally a clearly marked Sample order notification.
+// This is intentionally a clearly marked .
 // Replace it with real order data if you want live notifications.
 const demoNames = ["Ayesha", "Sana", "Hira", "Maham"];
 const demoCities = ["Karachi", "Lahore", "Islamabad", "Rawalpindi"];
@@ -815,6 +837,34 @@ document.addEventListener("click",function(e){
   if(id && id.charAt(0)==="#"){
     const el=document.querySelector(id);
     if(el){e.preventDefault();el.scrollIntoView({behavior:"smooth",block:"start"});}
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.ttq) return;
+
+  ttq.track("ViewContent", {
+    content_id: "hand_feet_cream",
+    content_type: "product",
+    content_name: "Hand & Feet Cream"
+  });
+
+  const orderForm = document.getElementById("orderForm");
+  if (orderForm) {
+    let checkoutTracked = false;
+    orderForm.addEventListener("focusin", function () {
+      if (!checkoutTracked) {
+        checkoutTracked = true;
+        ttq.track("InitiateCheckout", {
+          content_id: "hand_feet_cream",
+          content_type: "product",
+          content_name: "Hand & Feet Cream"
+        });
+      }
+    });
   }
 });
 </script>
