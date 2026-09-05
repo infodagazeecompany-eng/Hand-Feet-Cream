@@ -603,20 +603,29 @@ h1,h2,h3{letter-spacing:-.3px}
 </style>
 </head>
 <body>
+<style>
+body.thank-you-mode > *:not(#thanks):not(script) {
+  display: none !important;
+}
+body.thank-you-mode {
+  min-height: 100vh !important;
+  margin: 0 !important;
+  background: linear-gradient(135deg,#fbfaf5,#f2f7ee) !important;
+}
+body.thank-you-mode #thanks {
+  display: flex !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+}
+</style>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
   const params = new URLSearchParams(window.location.search);
   if (params.get('thank_you') === '1') {
-    const site = document.getElementById('site');
-    const thanks = document.getElementById('thanks');
-    if (site) site.style.display = 'none';
-    if (thanks) {
-      thanks.style.display = 'flex';
-      window.scrollTo(0, 0);
-    }
+    document.body.classList.add('thank-you-mode');
     document.title = 'Order Placed Successfully';
   }
-});
+})();
 </script>
 
 <div id="site">
